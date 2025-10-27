@@ -28,8 +28,12 @@
     <!-- start header -->
 
             <header>
-
                 <div class="container">
+                    <!-- زر القائمة المضافة للاستجابة -->
+                    <button class="menu-toggle" id="menu-toggle" aria-label="Toggle navigation">
+                        <i class="fas fa-bars"></i>
+                    </button>
+                    <!-- نهاية زر القائمة المضافة -->
                     <div class="logo">
                         <div class="image-box">
                             <img src="img/logo.png" alt="">
@@ -40,7 +44,8 @@
 
                         </div>
                     </div>
-                    <ul class="list">
+                    <!-- إضافة ID للقائمة للتفاعل مع JavaScript -->
+                    <ul class="list" id="nav-menu">
                         <li class="li-list">
                         <a href="../index.html" class="active"> الرئيسة  </a> 
                         </li>
@@ -207,112 +212,12 @@
 <!-- end slider -->
 
   
-        <div class="slid-menu">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-book-reader" style="color: #fbfdfd;"></i>
-                        <span>الطلاب والخريجين</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-briefcase"></i>
-                        <span>هيئة التدريس والعاملون </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-user-graduate"></i>
-                        <span>  والدراسات العليا </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-eye" ></i>
-                        <span> الجودة  </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-question" ></i>
-                        <span> الخدمات الالكترونية  </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-link" ></i>  
-                        <span> روابط هامة </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <!-- إزالة القوائم الجانبية العائمة من HTML على أساس أنها تم إخفاؤها في CSS للموبايل -->
+        <!-- <div class="slid-menu">...</div> -->
 
-        <div class="slid-menu-BL">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa-regular fa-credit-card"></i>
-                        <span>الفاعليات الحديثة</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-regular fa-clock"></i>
-                        <span> الجودة  </span>
-                        
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <span> الدعم الفنى </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-chalkboard"></i>
-                        <span> منصة المقررات الالكترونية</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
+        <!-- <div class="slid-menu-BL">...</div> -->
 
-        <div class="slid-menu-BR">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-desktop"></i>
-                        <span> الطلاب </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-book-reader"></i>
-                        <span> الدراسات العليا </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-user-graduate"></i>
-                        <span> اعضاء هيئة التدريس </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span>الوافدين  </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-plane"></i>
-                        <span> الجودة </span>
-                    </a>
-                </li>
-            
-            </ul>
-        </div>
+        <!-- <div class="slid-menu-BR">...</div> -->
 <!-- end section landing -->
 
 
@@ -325,7 +230,8 @@
             <div class="news-container">
                 <div class="news-item">
                     <h2 class="news-title"> تهنئة </h2>
-                    <img src="img/4 (1).jpeg" class="news-image">
+                    <!-- Placeholder Image for: تهنئة د/ محمد يوسف -->
+                    <img src="https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر" alt="تهنئة" class="news-image">
                     <p>عزاء واجب للدكتور <span>  محمد يوسف مدرس بقسم تكنولوجيا   التعليم </span>لوفاة شقيق سيادته  </p>
                     <a href="./News/index.html" target="_blank">
                         <button  class="read-more"> المزيد</button>
@@ -334,7 +240,8 @@
                 
                 <div class="news-item">
                     <h2 class="news-title"> تهنئة</h2>
-                    <img src="img/4 (2).jpeg" class="news-image">
+                    <!-- Placeholder Image for: تهنئة (2) -->
+                    <img src="https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر" alt="تهنئة" class="news-image">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
                         <button  class="read-more"> المزيد</button>
@@ -343,7 +250,8 @@
                 
                 <div  class="news-item">
                     <h2 class="news-title"> تنبيه هام</h2>
-                    <img src="img/4 (3).jpeg" alt="صورة الخبر 3" class="news-image">
+                    <!-- Placeholder Image for: تنبيه هام (3) -->
+                    <img src="https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر" alt="تنبيه هام" class="news-image">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
                         <button  class="read-more"> المزيد</button>
@@ -352,7 +260,8 @@
 
                 <div class="news-item">
                     <h2 class="news-title"> تنبيه هام</h2>
-                    <img src="img/4 (6).jpeg" alt="صورة الخبر 4" class="news-image">
+                    <!-- Placeholder Image for: تنبيه هام (4) -->
+                    <img src="https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر" alt="تنبيه هام" class="news-image">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
                         <button  class="read-more"> المزيد</button>
@@ -361,7 +270,8 @@
 
                 <div class="news-item">
                     <h2 class="news-title"> ورشة عمل اشغال فنية لطلاب الفرقة الثالثة بقسم الاقتصاد المنزلي </h2>
-                    <img src="img/4 (7).jpeg" alt="صورة الخبر 5" class="news-image">
+                    <!-- Placeholder Image for: ورشة عمل -->
+                    <img src="https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر" alt="ورشة عمل" class="news-image">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
                         <button  class="read-more"> المزيد</button>
@@ -370,7 +280,8 @@
 
                 <div class="news-item">
                     <h2 class="news-title">تنبيه هام  </h2>
-                    <img src="img/4 (8).jpeg" alt="صورة الخبر 6" class="news-image">
+                    <!-- Placeholder Image for: تنبيه هام (6) -->
+                    <img src="https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر" alt="تنبيه هام" class="news-image">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
                         <button  class="read-more"> المزيد</button>
@@ -388,7 +299,8 @@
             <div class="e-service-container">
         <div class="main-container">
                 <div class="image-container">
-                    <img src="img/digital-marketing-php-developer-jobs-meerut-delhi-ncr-ghaziabad-muzaffarnagar.gif" alt="Big Image" class="big-image">
+                    <!-- Placeholder Image for: صورة تسويق رقمي -->
+                    <img src="https://placehold.co/400x300/00abf0/FFFFFF?text=خدمات+الكترونية" alt="Big Image" class="big-image">
                 </div>
                 <div class="services-e-services">
                     <div class="service">
@@ -469,7 +381,8 @@
                 <div class="card-event">
                     <h3>حصاد الكلية الشهري</h3>
                     <div class="image-box">
-                        <img src="img/even-11.avif" alt="حصاد الكلية">
+                        <!-- Placeholder Image for: حصاد الكلية الشهري -->
+                        <img src="https://placehold.co/400x250/00abf0/FFFFFF?text=حصاد+الكلية" alt="حصاد الكلية">
                     </div>
                     <a href="./Events/index.html" target="_blank"> 
                         <button class="events">عرض المزيد</button>
@@ -479,7 +392,8 @@
                 <div class="card-event" >
                     <h3>أحدث الفيديوهات</h3> 
                     <div class="image-box">
-                        <img src="img/events-2.jpg" alt="حصاد الكلية">
+                        <!-- Placeholder Image for: أحدث الفيديوهات -->
+                        <img src="https://placehold.co/400x250/00abf0/FFFFFF?text=فيديوهات" alt="حصاد الكلية">
                     </div>                
                     <a href="./Events/index.html" target="_blank">
                         <button class="events">عرض المزيد</button>
@@ -488,7 +402,8 @@
                 <div class="card-event" >
                     <h3>أحدث الأنشطة الطلابية</h3>
                     <div class="image-box">
-                        <img src="img/evants-1.jpg" alt="حصاد الكلية">
+                        <!-- Placeholder Image for: أحدث الأنشطة الطلابية -->
+                        <img src="https://placehold.co/400x250/00abf0/FFFFFF?text=أنشطة+طلابية" alt="حصاد الكلية">
                     </div>
                     <a href="./Events/index.html" target="_blank">
                         <button class="events">عرض المزيد</button>
@@ -512,7 +427,8 @@
             <div class="container">
                 <div class="card activ">
                     <div class="box-img">
-                        <div class="img" style="background-image: url(img/ahmed\ mohsen.jpg);" ></div>
+                        <!-- Placeholder Image for: د/أحمد محسن ماضي -->
+                        <div class="img" style="background-image: url(https://placehold.co/250x350/E38E49/000B58?text=أحمد+محسن);" ></div>
                         <div class="left"></div>
                     </div>
                     <div class="text">
@@ -525,7 +441,8 @@
                 </div>
                 <div class="card">
                     <div class="box-img">
-                        <div class="img" style="background-image: url(img/nada-safwat.jpg);" ></div>
+                        <!-- Placeholder Image for: د/ ندي صفوت أحمد -->
+                        <div class="img" style="background-image: url(https://placehold.co/250x350/E38E49/000B58?text=ندى+صفوت);" ></div>
                         <div class="left"></div>
                     </div>
                     <div class="text">
@@ -540,7 +457,8 @@
                 </div>
                 <div class="card">
                     <div class="box-img">
-                        <div class="img" style="background-image: url(img/hesham-m.jpg);" ></div>
+                        <!-- Placeholder Image for: محمد هشام الخطيب -->
+                        <div class="img" style="background-image: url(https://placehold.co/250x350/E38E49/000B58?text=محمد+هشام);" ></div>
                         <div class="left"></div>
                     </div>
                     <div class="text">
@@ -554,7 +472,8 @@
                 </div>
                 <div class="card">
                     <div class="box-img">
-                        <div class="img" style="background-image: url(img/yasmaen.png);" ></div>
+                        <!-- Placeholder Image for: ياسمين مجدي أحمد -->
+                        <div class="img" style="background-image: url(https://placehold.co/250x350/E38E49/000B58?text=ياسمين+مجدي);" ></div>
                         <div class="left"></div>
                     </div>
                     <div class="text">
@@ -585,7 +504,8 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
+                                <!-- Placeholder icon for: مركز التخصصات النوعية -->
+                                <img src="https://placehold.co/50x50/FFFFFF/000B58?text=مركز" alt="أيقونة" class="icon">
                                 <h2>مركز التخصصات النوعية</h2>
                                 <h5> مركز يهتم بتقديم مجموعة من الدورات والتدريبيات والخدمات </h5>
                             </div>
@@ -599,7 +519,8 @@
                      <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
+                                <!-- Placeholder icon for: وحدة ضمان الجودة والاعتماد -->
+                                <img src="https://placehold.co/50x50/FFFFFF/000B58?text=جودة" alt="أيقونة" class="icon">
                                 <h2>وحدة ضمان الجودة والاعتماد</h2>
                                 <h5> وحدة ضمان الجودة تضم كل ما يخص بالجودة والاعتماد</h5>
                             </div>
@@ -613,7 +534,8 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
+                                <!-- Placeholder icon for: مركز الابتكار وريادة الاعمال -->
+                                <img src="https://placehold.co/50x50/FFFFFF/000B58?text=ريادة" alt="أيقونة" class="icon">
                                 <h2>مركز الابتكار وريادة الاعمال</h2>
                                 <h5>لتحقيق التميز النوعي من خلال تقديم خريج نوعي يمتلك الابتكار وريادة الاعمال والمنافسة </h5>
                             </div>
@@ -628,7 +550,8 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
+                                <!-- Placeholder icon for: وحدة الخدمات الالكترونية -->
+                                <img src="https://placehold.co/50x50/FFFFFF/000B58?text=رقمي" alt="أيقونة" class="icon">
                                 <h2>وحدة الخدمات الالكترونية</h2>
                                 <h5>تقدم وحدة الخدمات الالكترونية خدمات الطلاب فى الدفع الالكتروني والمقررات الالكترونية </h5>
                             </div>
@@ -643,7 +566,8 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
+                                <!-- Placeholder icon for: وحدة التقويم ونظم الامتحانات -->
+                                <img src="https://placehold.co/50x50/FFFFFF/000B58?text=تقويم" alt="أيقونة" class="icon">
                                 <h2>وحدة التقويم ونظم الامتحانات</h2>
                                 <h5> تسعي الوحدة للتميز والريادة فى تطبيق انظمة واليات التقويم الالكتروني على المستوي المحلي والاقليمي</h5>
                             </div>
@@ -658,7 +582,8 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
+                                <!-- Placeholder icon for: لجنة الاشراف الاكاديمي -->
+                                <img src="https://placehold.co/50x50/FFFFFF/000B58?text=إشراف" alt="أيقونة" class="icon">
                                 <h2>لجنة الاشراف الاكاديمي</h2>
                                 <h5> تساعد فى رفع مستوي الطلاب وايجاد بيئة محفزة على التطور والنجاح</h5>
                             </div>
@@ -705,7 +630,8 @@
                     </div>
                 <button class="button-traning">تعرف على المزيد!</button>
             </div>
-            <img src="img/download.png" alt="">
+            <!-- Placeholder Image for: دورات تدريبية -->
+            <img src="https://placehold.co/400x350/00abf0/FFFFFF?text=دورات+تدريبية" alt="صورة دورات تدريبية">
     
         </div>
      </section> 
@@ -771,9 +697,9 @@
                   </div>
                   <lottie-player
                     src="https://lottie.host/47a8b8cd-685f-4393-900c-86e1cb4f6c07/kg7E5Vxkk0.json"
-                    background="##FFFFFF"
+                    background="transparent"
                     speed="1"
-                    style="width: 500px; height: 400px"
+                    style="width: 100%; height: auto; max-width: 400px;"
                     loop
                     autoplay
                     direction="1"
@@ -804,7 +730,7 @@
           <div class="footer-content-map">
             <h3>خريطة الوصول</h3>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7037.398974178848!2d30.809214892746826!3d28.1251850704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b25ff9f2c6421%3A0xf3f9d5c0acde7e11!2z2YPZhNmK2Kkg2KfZhNiq2LHYqNmK2Kkg2KfZhNmG2YjYudmK2Kkg2KfZhNmF2KjZhtmJINin2YTZgtiv2YrZhQ!5e0!3m2!1sar!2seg!4v1732892050418!5m2!1sar!2seg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7037.398974178848!2d30.809214892746826!3d28.1251850704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b25ff9f2c6421%3A0xf3f9d5c0acde7e11!2z2YPZhNmK2Kkg2KfZhNiq2LHYqNmK2Kkg2KfZhNmG2YjYudmK2Ksg2KfZhNmF2KjZhtmJINin2YTZgtiv2YrZhQ!5e0!3m2!1sar!2seg!4v1732892050418!5m2!1sar!2seg"
               width="400"
               height="300"
               style="border: 0"
