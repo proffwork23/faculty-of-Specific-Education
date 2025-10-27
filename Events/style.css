@@ -1,0 +1,57 @@
+.title-bage{
+    color: orange !important;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+    margin: 150px 150px 0 0;
+}
+.news{
+    background-color: #f0f0f0;
+    padding: 20px;
+    border-radius: 5px;
+    color: black;
+    /* margin-top: 150px; */
+}
+.news .cardes{
+    width: 80%;
+    margin: auto;
+
+}
+.news .cardes .card{
+    background-color: #fff;
+    display: flex;
+    gap: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 15px;
+}
+.news .cardes .card img{
+    min-width: 250px;
+    height: 200px;
+    border-radius: 5px;
+    display: inline-block;
+}
+.news .cardes .card h4{
+    /* display: block; */
+    font-size: 25px;
+}
+/* .news .cardes .card div a{
+    font-size: 2rem;
+    display: block;
+    font-weight: 700;
+    color: black;
+
+} */
+.news .cardes .card div span{
+    display: block;
+    font-size: 15px;
+    color: rgba(0, 0, 0, 0.538);
+}
+.news .cardes .card a {
+    margin: 150px 0 0 40px;
+}
+.news .cardes .card a button{
+    font-size: 25px;
+
+}

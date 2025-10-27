@@ -319,7 +319,7 @@ div.landing-pag .card-1.activ-1{
     display: block;
 }
 div.landing-pag .card-1.card-one{
-    background-image: url(pictures/1.jpg);
+    background-image: url(pictures/1.png);
     background-size: cover;
     position: center;
     animation: blurBackground 7s infinite alternate;
@@ -330,7 +330,7 @@ div.landing-pag .card-1.card-one{
   }
     
 div.landing-pag .card-tow{
-    background-image: url(pictures/2.jpg);
+    background-image: url(pictures/2.png);
     background-size: cover;
     animation: blurBackground 4s infinite alternate;
 }
@@ -340,7 +340,7 @@ div.landing-pag .card-tow{
   }
     
 div.landing-pag .card-thre{
-    background-image: url(pictures/3.jpg);
+    background-image: url(pictures/3.png);
     background-size: cover;
     animation: blurBackground 4s infinite alternate;
 }
@@ -642,12 +642,6 @@ div.landing-pag .card-1 button.vieo-imag a{
 }
 
 /* end-newes-secation-styles */
-
-
-
-
-
-
 
 
   /* start-e-service-design */
@@ -1196,40 +1190,91 @@ div.landing-pag .card-1 button.vieo-imag a{
         /* end-trianing-unites */
 
 /* النسب والاحصائيات */
-    
-    /* start Ratios */
+/* start Ratios */
 
-    .Ratios{
-        margin-top: 80px  ;
-        height: 300px;
+.Ratios{
+    margin-top: 80px  ;
+    height: 300px;
+}
+.Ratios .title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.Ratios .cardes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 50px;
+    background-color: var(--text-color);
+    border-radius: 120px;
+    padding: 20px 0;
+}
+.Ratios .card-ratios{
+    display: flex;
+    margin-right: 70px;
+}
+.Ratios .card-ratios i{
+    font-size: 80px;
+    padding:20px;
+}
+.Ratios .cardes span{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding-top: 30px;
+    border: 1px solid var(--main-text-color);
+    border-radius: 50%;
+    margin: 20px 0 ;
+    font-size: 30px;
+}
+.Ratios .cardes .card h5{
+    font-size: 25px;
+}
+/* end Ratios *//* start Ratios */
 
-    }
-    .Ratios .title{
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-    }
-    .Ratios .cardes{
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        text-align: center;
-        margin: 0 50px;
-    }
-    .Ratios .cardes span{
-        display: inline-block;
-        width: 110px;
-        height: 110px;
-        padding-top: 30px;
-        border: 1px solid var(--main-text-color);
-        border-radius: 50%;
-        margin: 20px 0 ;
-        font-size: 30px;
-    }
-    .Ratios .cardes .card h5{
-        font-size: 25px;
-    }
+.Ratios{
+    margin-top: 80px  ;
+    height: 300px;
+}
+.Ratios .title{
+    text-align: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+.Ratios .cardes{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-around;
+    text-align: center;
+    margin: 0 50px;
+    background-color: var(--text-color);
+    border-radius: 120px;
+    padding: 20px 0;
+}
+.Ratios .card-ratios{
+    display: flex;
+    margin-right: 70px;
+}
+.Ratios .card-ratios i{
+    font-size: 80px;
+    padding:20px;
+}
+.Ratios .cardes span{
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    padding-top: 30px;
+    border: 1px solid var(--main-text-color);
+    border-radius: 50%;
+    margin: 20px 0 ;
+    font-size: 30px;
+}
+.Ratios .cardes .card h5{
+    font-size: 25px;
+}
 /* end Ratios */
-
 
 /* الشكاوي والمقترحات */
   
