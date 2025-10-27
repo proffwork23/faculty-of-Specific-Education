@@ -50,6 +50,7 @@
                         <a href="../index.html" class="active"> الرئيسة  </a> 
                         </li>
                         <li class="li-list">
+                            <!-- تم إزالة السهم في CSS، هنا يتم تفعيل الـ dropdown -->
                             <h6 class="title">عن الكلية</h6>
                             <ul class="main-list">
                                 <li> <a href="./about facaulty page/نشاةالكلية.html" target="_blank">نشأت الكلية </a></li>
@@ -58,8 +59,9 @@
                                 <li> <a href="./about facaulty page/خريطة وابنية الكلية.html" target="_blank">خريطة الكلية (الابنية والمعامل) </a> </li>
                                 <li> <a href="./about facaulty page/برامج الكلية.html" target="_blank">البرامج التى تقدمها الكلية </a> </li>
                                 <li> <a href="./about facaulty page/غايات واهداف.html" target="_blank">غايات واهدافه الكلية </a> </li>
-                                <li>
-                                    <h6 class="title-2"> اللوائح الدراسيه للكلية</h6>
+                                <li class="has-sub-list">
+                                    <!-- تم تعديل title-2 ليتضمن span لتشغيل الـ JS -->
+                                    <h6 class="title-2"> <span>اللوائح الدراسيه للكلية</span></h6>
                                     <ul class="secundery-list">
                                         <li> <a href="./about facaulty page/لائحة البكالوريوس.html"target="_blank">لائحة البكالوريوس 2018 </a> </li>
                                         <li> <a href="./about facaulty page/لائحة الدراسات العليا.html"target="_blank">لائحة الدراسات العليا </a> </li>
@@ -76,15 +78,17 @@
                                 <li> <a href="./mangeent/قيادات الكلية.html" target="_blank"> القيادات الأكاديمية </a> </li>
                                 <li> <a href="./mangeent/القيادات الادارية.html" target="_blank">القيادات الادارية </a> </li>
                                 <li> <a href="./mangeent/عمداء الكلية السابقين.html" target="_blank">عمداء الكلية السابقين </a> </li>
-                                <li>
-                                    <h6 class="title-2"> <a href="#"> نظم الكترونية </a> </h6>
+                                <li class="has-sub-list">
+                                    <!-- تم تعديل title-2 ليتضمن span لتشغيل الـ JS -->
+                                    <h6 class="title-2"> <span>نظم الكترونية</span> </h6>
                                     <ul class="secundery-list">
                                         <li> <a href="https://allstd.mans.edu.eg" target="_blank">شئون الطلاب الموحد </a> </li>
                                         <li> <a href="http://newhr.mans.edu.eg" target="_blank">نظام الفاروق لادارة الموارد</a> </li>
                                     </ul>
                                 </li>
-                                <li>
-                                    <h6 class="title-2"> ادلة وقوانين </h6>
+                                <li class="has-sub-list">
+                                    <!-- تم تعديل title-2 ليتضمن span لتشغيل الـ JS -->
+                                    <h6 class="title-2"> <span>ادلة وقوانين</span> </h6>
                                     <ul class="secundery-list">
                                         <li> <a href="http://www.nib.gov.eg/PDF/قوانين%20الخدمة%20المدنية.pdf" target="_blank">قانون العاملين بالدولة </a> </li>
                                         <li> <a href="https://www.du.edu.eg/files/قانون%20تنظيم%20الجامعات%20المصرية.pdf" target="_blank">قانون تنظيم الجامعات </a> </li>
@@ -212,113 +216,10 @@
 <!-- end slider -->
 
   
-        <!-- إزالة القوائم الجانبية العائمة من HTML على أساس أنها تم إخفاؤها في CSS للموبايل -->
-        <div class="slid-menu">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-book-reader" style="color: #fbfdfd;"></i>
-                        <span>الطلاب والخريجين</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-briefcase"></i>
-                        <span>هيئة التدريس والعاملون </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-user-graduate"></i>
-                        <span>  والدراسات العليا </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-eye" ></i>
-                        <span> الجودة  </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-question" ></i>
-                        <span> الخدمات الالكترونية  </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-link" ></i>  
-                        <span> روابط هامة </span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="slid-menu-BL">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa-regular fa-credit-card"></i>
-                        <span>الفاعليات الحديثة</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-regular fa-clock"></i>
-                        <span> الجودة  </span>
-                        
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-screwdriver-wrench"></i>
-                        <span> الدعم الفنى </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-chalkboard"></i>
-                        <span> منصة المقررات الالكترونية</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
-        <div class="slid-menu-BR">
-            <ul>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-desktop"></i>
-                        <span> الطلاب </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fa-book-reader"></i>
-                        <span> الدراسات العليا </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa fas fa-user-graduate"></i>
-                        <span> اعضاء هيئة التدريس </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-user-tie"></i>
-                        <span>الوافدين  </span>
-                    </a>
-                </li>
-                <li>
-                    <a href="#">
-                        <i class="fa-solid fa-plane"></i>
-                        <span> الجودة </span>
-                    </a>
-                </li>
-            
-            </ul>
-        </div>
+        <!-- إزالة القوائم الجانبية العائمة (Slid Menus) من HTML لعدم الحاجة إليها على الموبايل ولتقليل ازدحام الكود -->
+        <!-- <div class="slid-menu">...</div> -->
+        <!-- <div class="slid-menu-BL">...</div> -->
+        <!-- <div class="slid-menu-BR">...</div> -->
 <!-- end section landing -->
 
 
@@ -331,7 +232,7 @@
             <div class="news-container">
                 <div class="news-item">
                     <h2 class="news-title"> تهنئة </h2>
-                    <!-- إعادة المسار الأصلي للصورة -->
+                    <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                     <img src="img/4 (1).jpeg" alt="تهنئة" class="news-image" onerror="this.onerror=null; this.src='https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر'">
                     <p>عزاء واجب للدكتور <span>  محمد يوسف مدرس بقسم تكنولوجيا   التعليم </span>لوفاة شقيق سيادته  </p>
                     <a href="./News/index.html" target="_blank">
@@ -341,7 +242,7 @@
                 
                 <div class="news-item">
                     <h2 class="news-title"> تهنئة</h2>
-                    <!-- إعادة المسار الأصلي للصورة -->
+                    <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                     <img src="img/4 (2).jpeg" alt="تهنئة" class="news-image" onerror="this.onerror=null; this.src='https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر'">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
@@ -351,7 +252,7 @@
                 
                 <div  class="news-item">
                     <h2 class="news-title"> تنبيه هام</h2>
-                    <!-- إعادة المسار الأصلي للصورة -->
+                    <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                     <img src="img/4 (3).jpeg" alt="تنبيه هام" class="news-image" onerror="this.onerror=null; this.src='https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر'">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
@@ -361,7 +262,7 @@
 
                 <div class="news-item">
                     <h2 class="news-title"> تنبيه هام</h2>
-                    <!-- إعادة المسار الأصلي للصورة -->
+                    <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                     <img src="img/4 (6).jpeg" alt="تنبيه هام" class="news-image" onerror="this.onerror=null; this.src='https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر'">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
@@ -371,7 +272,7 @@
 
                 <div class="news-item">
                     <h2 class="news-title"> ورشة عمل اشغال فنية لطلاب الفرقة الثالثة بقسم الاقتصاد المنزلي </h2>
-                    <!-- إعادة المسار الأصلي للصورة -->
+                    <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                     <img src="img/4 (7).jpeg" alt="ورشة عمل" class="news-image" onerror="this.onerror=null; this.src='https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر'">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
@@ -381,7 +282,7 @@
 
                 <div class="news-item">
                     <h2 class="news-title">تنبيه هام  </h2>
-                    <!-- إعادة المسار الأصلي للصورة -->
+                    <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                     <img src="img/4 (8).jpeg" alt="تنبيه هام" class="news-image" onerror="this.onerror=null; this.src='https://placehold.co/400x200/00abf0/FFFFFF?text=صورة+خبر'">
                     <p>Loremm consequatur dignissimos omnis doloribus magnam beatae facilis deserunt </p>
                     <a href="./News/index.html" target="_blank">
@@ -400,7 +301,7 @@
             <div class="e-service-container">
         <div class="main-container">
                 <div class="image-container">
-                    <!-- إعادة المسار الأصلي للصورة -->
+                    <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                     <img src="img/digital-marketing-php-developer-jobs-meerut-delhi-ncr-ghaziabad-muzaffarnagar.gif" alt="Big Image" class="big-image" onerror="this.onerror=null; this.src='https://placehold.co/400x300/00abf0/FFFFFF?text=خدمات+الكترونية'">
                 </div>
                 <div class="services-e-services">
@@ -482,7 +383,7 @@
                 <div class="card-event">
                     <h3>حصاد الكلية الشهري</h3>
                     <div class="image-box">
-                        <!-- إعادة المسار الأصلي للصورة -->
+                        <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                         <img src="img/even-11.avif" alt="حصاد الكلية" onerror="this.onerror=null; this.src='https://placehold.co/400x250/00abf0/FFFFFF?text=حصاد+الكلية'">
                     </div>
                     <a href="./Events/index.html" target="_blank"> 
@@ -493,7 +394,7 @@
                 <div class="card-event" >
                     <h3>أحدث الفيديوهات</h3> 
                     <div class="image-box">
-                        <!-- إعادة المسار الأصلي للصورة -->
+                        <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                         <img src="img/events-2.jpg" alt="حصاد الكلية" onerror="this.onerror=null; this.src='https://placehold.co/400x250/00abf0/FFFFFF?text=فيديوهات'">
                     </div>                
                     <a href="./Events/index.html" target="_blank">
@@ -503,7 +404,7 @@
                 <div class="card-event" >
                     <h3>أحدث الأنشطة الطلابية</h3>
                     <div class="image-box">
-                        <!-- إعادة المسار الأصلي للصورة -->
+                        <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                         <img src="img/evants-1.jpg" alt="حصاد الكلية" onerror="this.onerror=null; this.src='https://placehold.co/400x250/00abf0/FFFFFF?text=أنشطة+طلابية'">
                     </div>
                     <a href="./Events/index.html" target="_blank">
@@ -526,7 +427,7 @@
                 <span class="right" id="next-btn" ><i class="fa-solid fa-arrow-left"></i></span>
             </div>
             <div class="container">
-                <!-- تم تغيير الرابط في الـ style مباشرة -->
+                <!-- تم التأكد من رجوع مسارات الصور الأصلية في الـ style -->
                 <div class="card activ">
                     <div class="box-img">
                         <div class="img" style="background-image: url(img/ahmed\ mohsen.jpg);" ></div>
@@ -602,7 +503,7 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <!-- إعادة المسار الأصلي للصورة -->
+                                <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                                 <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
                                 <h2>مركز التخصصات النوعية</h2>
                                 <h5> مركز يهتم بتقديم مجموعة من الدورات والتدريبيات والخدمات </h5>
@@ -617,7 +518,7 @@
                      <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <!-- إعادة المسار الأصلي للصورة -->
+                                <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                                 <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
                                 <h2>وحدة ضمان الجودة والاعتماد</h2>
                                 <h5> وحدة ضمان الجودة تضم كل ما يخص بالجودة والاعتماد</h5>
@@ -632,7 +533,7 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <!-- إعادة المسار الأصلي للصورة -->
+                                <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                                 <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
                                 <h2>مركز الابتكار وريادة الاعمال</h2>
                                 <h5>لتحقيق التميز النوعي من خلال تقديم خريج نوعي يمتلك الابتكار وريادة الاعمال والمنافسة </h5>
@@ -648,7 +549,7 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <!-- إعادة المسار الأصلي للصورة -->
+                                <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                                 <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
                                 <h2>وحدة الخدمات الالكترونية</h2>
                                 <h5>تقدم وحدة الخدمات الالكترونية خدمات الطلاب فى الدفع الالكتروني والمقررات الالكترونية </h5>
@@ -664,7 +565,7 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <!-- إعادة المسار الأصلي للصورة -->
+                                <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                                 <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
                                 <h2>وحدة التقويم ونظم الامتحانات</h2>
                                 <h5> تسعي الوحدة للتميز والريادة فى تطبيق انظمة واليات التقويم الالكتروني على المستوي المحلي والاقليمي</h5>
@@ -680,7 +581,7 @@
                     <div class="card-container" onclick="flipCard(this)">
                         <div class="card-unites">
                             <div class="front yellow">
-                                <!-- إعادة المسار الأصلي للصورة -->
+                                <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
                                 <img src="img/clipart-user-1-256x256-da11.png" alt="أيقونة" class="icon">
                                 <h2>لجنة الاشراف الاكاديمي</h2>
                                 <h5> تساعد فى رفع مستوي الطلاب وايجاد بيئة محفزة على التطور والنجاح</h5>
@@ -728,7 +629,7 @@
                     </div>
                 <button class="button-traning">تعرف على المزيد!</button>
             </div>
-            <!-- إعادة المسار الأصلي للصورة -->
+            <!-- تم التأكد من رجوع مسارات الصور الأصلية -->
             <img src="img/download.png" alt="صورة دورات تدريبية" onerror="this.onerror=null; this.src='https://placehold.co/400x350/00abf0/FFFFFF?text=دورات+تدريبية'">
     
         </div>
@@ -828,7 +729,7 @@
           <div class="footer-content-map">
             <h3>خريطة الوصول</h3>
             <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7037.398974178848!2d30.809214892746826!3d28.1251850704!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x145b25ff9f2c6421%3A0xf3f9d5c0acde7e11!2z2YPZhNmK2Kkg2KfZhNiq2LHYqNmK2Ksg2KfZhNmG2YjYudmK2Ksg2KfZhNmF2KjZhtmJINin2YTZgtiv2YrZhQ!5e0!3m2!1sar!2seg!4v1732892050418!5m2!1sar!2seg"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7037.398974178848!2d30.809214892746826!3d28.1251850704!2m3!1f0!2f0!4f13.1!3m3!1m2!1s0x145b25ff9f2c6421%3A0xf3f9d5c0acde7e11!2z2YPZhNmK2Kkg2KfZhNiq2LHYqNmK2Ksg2KfZhNmG2YjYudmK2Ksg2KfZhNmF2KjZhtmJINin2YTZgtiv2YrZhQ!5e0!3m2!1sar!2seg!4v1732892050418!5m2!1sar!2seg"
               width="400"
               height="300"
               style="border: 0"
