@@ -1565,8 +1565,25 @@ footer {
 /*==========================================================
 | Mobile Responsiveness Fixes (Max-width 768px)
 ==========================================================*/
+/*==========================================================
+| Mobile Responsiveness Fixes (Max-width 768px)
+==========================================================*/
 
 @media (max-width: 768px) {
+    /* **1. FIX ALL OVERFLOWING ELEMENTS** */
+    * {
+        /* This prevents any element from forcing the page to scroll horizontally */
+        max-width: 100% !important; 
+        overflow-x: hidden !important; 
+    }
+    body {
+        overflow-x: hidden !important;
+    }
+
+    /* **2. Header and Logo Fixes (Addressing the main issue)** */
+    header {
+        width: 100%;
+    }
     .container {
         flex-direction: column;
         align-items: flex-start;
@@ -1574,14 +1591,13 @@ footer {
         width: 100%;
     }
     
-    /* 1. Header and Logo Fixes */
     .container .logo {
         flex-direction: column;
         align-items: center;
         width: 100%;
         position: relative;
         padding-top: 10px;
-        height: 120px; /* Give it enough height to contain logo and text */
+        height: auto; /* Allow height to adjust */
     }
     .container .logo img {
         position: static; /* Remove absolute positioning */
@@ -1619,7 +1635,6 @@ footer {
     /* Navigation list adjustment - Hiding/Stacking */
     .container .list {
         display: none; /* Hide the full navigation list for mobile */
-        /* You will need JavaScript to show it when .menu-toggle is clicked */
         position: absolute;
         top: 120px;
         left: 0;
@@ -1639,28 +1654,56 @@ footer {
         padding: 10px 0;
     }
     
-    /* 2. News Section */
+    /* FIX: Introduction Ticker/Slider */
+    header .introduction {
+        padding-right: 0;
+        width: 100%;
+        overflow: hidden; /* Ensure content stays within bounds */
+    }
+    .introduction h6 {
+        /* Allow the animation to move, but ensure the container is controlled */
+        white-space: nowrap; 
+    }
+
+    /* 3. Landing Page (Slider/Footer Menus) */
+    .landing-pag #next-btn-1,
+    .landing-pag #prev-btn-1 {
+        top: 30%; /* Move arrows higher to be visible */
+    }
+    .slid-menu-BL {
+        width: 90%; 
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -55px; /* Adjust position */
+    }
+    .slid-menu-BR {
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -110px; /* Adjust position to be below BL */
+        margin-top: 60px;
+    }
+    .slid-menu-BR ul {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    /* 4. News Section */
     .headline {
-        margin-top: 150px; /* Adjust margin due to fixed header */
+        margin-top: 150px; 
         font-size: 30px; 
     }
     .news-container {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
         gap: 2rem;
         margin: 1rem;
     }
     .news-item {
         width: 100%; 
         height: auto;
-        max-height: 50vh;
-        overflow: hidden;
-    }
-    .news-title {
-        height: auto;
-        margin-bottom: 5px;
     }
 
-    /* 3. E-Services Section */
+    /* 5. E-Services Section */
     .main-container {
         flex-direction: column;
     }
@@ -1670,16 +1713,13 @@ footer {
     }
     .services-e-services {
         grid-template-columns: repeat(2, 1fr); /* 2 columns */
-        gap: 2rem;
+        gap: 1rem;
         width: 90%; 
-        margin: 2rem auto; /* Center it */
-    }
-    .icon-container {
-        width: 6rem;
-        height: 12vh;
+        margin: 2rem auto; 
+        margin-left: auto; /* Override original margin */
     }
 
-    /* 4. Events Section */
+    /* 6. Events Section */
     .container-event {
         flex-direction: column;
         gap: 20px;
@@ -1690,22 +1730,14 @@ footer {
         height: auto;
         padding-bottom: 50px;
     }
-    .events {
-        left: 50%;
-        transform: translateX(-50%);
-    }
 
-    /* 5. Unites Section */
-    .unites-faculity {
-        height: auto;
-        padding-bottom: 50px;
-    }
+    /* 7. Unites Section */
     .grid {
         grid-template-columns: 1fr; /* Single column */
         gap: 20px;
     }
     .card-container {
-        width: 90%;
+        width: 90%; /* Smaller width for container */
         height: 12rem;
         margin: 0 auto;
     }
@@ -1713,62 +1745,10 @@ footer {
         width: 90%;
         font-size: 1rem;
     }
-    .card-unites .front.yellow h2 {
-        font-size: 1.2rem;
-    }
-    .front.yellow h5 {
-        font-size: 1.2rem;
-    }
-
-    /* 6. Supervisory Models */
-    .supervisory-models .card {
-        flex-direction: column;
-        align-items: center;
-    }
-    .supervisory-models .box-img {
-        margin: 20px 0;
-    }
-    .supervisory-models .text {
-        width: 90%;
-        margin-right: 0;
-        padding: 20px;
-        height: auto;
-    }
-    .supervisory-models .text .title {
-        position: static;
-        margin-top: 10px;
-        text-align: left;
-    }
-    .supervisory-models .button-click {
-        position: static;
-        text-align: center;
-        margin-bottom: 20px;
-    }
-
-    /* 7. Training Section */
-    .container-training {
-        flex-direction: column;
-        margin: 20px 0;
-        padding: 10px;
-    }
-    .container-training img {
-        width: 90%;
-        height: auto;
-        margin: 0 auto;
-    }
-    .content-training {
-        max-width: 100%;
-        margin-top: 20px;
-    }
-    .services-traing {
-        padding: 10px;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    .button-traning {
-        position: static;
-        width: 90%;
-        margin-top: 15px;
+    /* FIX: Remove fixed width that prevents back content from fitting */
+    .back p {
+        width: 90% !important;
+        font-size: 1rem;
     }
 
     /* 8. Ratios Section */
@@ -1780,13 +1760,6 @@ footer {
     .Ratios .card-ratios {
         justify-content: center;
         margin-right: 0;
-    }
-    .Ratios .cardes .card h5 {
-        font-size: 20px;
-    }
-    .Ratios {
-        height: auto;
-        padding-bottom: 30px;
     }
     
     /* 9. Form Section */
@@ -1802,13 +1775,6 @@ footer {
         grid-template-columns: 1fr; /* Single column */
         gap: 1rem;
     }
-    .filed-box textarea {
-        height: 8rem;
-    }
-    .left-sujestion .socialMedia {
-        margin-right: 0;
-        justify-content: center;
-    }
 
     /* 10. Footer Section */
     footer .container-footer {
@@ -1821,7 +1787,5 @@ footer {
         margin-top: 10px;
         align-self: center;
     }
-    .footer-content-link .links {
-        align-self: center;
-    }
+
 }
