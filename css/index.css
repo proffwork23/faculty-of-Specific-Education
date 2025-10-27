@@ -1,14 +1,14 @@
-    :root{
-        --dark-bg-color: #000B58;
-        --main-bg-color: #082e6f;
-        --secundery-bg-color: #082e6f;
-        /* --card-bg-color:hsl(0, 12%, 90%); */
-        --text-color:#00abf0;
-        --main-text-color: white;
-        --span-text-color:#E38E49;
-        --span-text-color2:orange;
+:root{
+    --dark-bg-color: #000B58;
+    --main-bg-color: #082e6f;
+    --secundery-bg-color: #082e6f;
+    /* --card-bg-color:hsl(0, 12%, 90%); */
+    --text-color:#00abf0;
+    --main-text-color: white;
+    --span-text-color:#E38E49;
+    --span-text-color2:orange;
 
-    }
+}
 
 
 *{
@@ -1389,7 +1389,7 @@ font-family: "cairo", serif;
  .filed-box textarea:focus{
     border-color: var(--dark-bg-color);
 }
-  /*  */
+  /* */
 
   /* form-design-suggest-style-end */
 
@@ -1559,5 +1559,269 @@ footer {
     background: linear-gradient(#95abcd,#05255e,#231a4d);
     border-radius: 10px;
   }
-  /*end scrol bar/*
+  /*end scrol bar*/
 
+
+/*==========================================================
+| Mobile Responsiveness Fixes (Max-width 768px)
+==========================================================*/
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 0.5rem;
+        width: 100%;
+    }
+    
+    /* 1. Header and Logo Fixes */
+    .container .logo {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding-top: 10px;
+        height: 120px; /* Give it enough height to contain logo and text */
+    }
+    .container .logo img {
+        position: static; /* Remove absolute positioning */
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto 5px auto;
+        display: block;
+    }
+    .logo-info span,
+    .logo-info .english {
+        position: static; /* Remove absolute positioning */
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin: 0;
+        line-height: 1.2;
+    }
+    .logo-info span {
+        font-size: 1.2rem;
+    }
+    .logo-info .english {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .menu-toggle {
+        display: block; /* Show menu toggle button */
+        position: absolute;
+        left: 20px;
+        top: 35px;
+        color: var(--text-color);
+        z-index: 100;
+    }
+
+    /* Navigation list adjustment - Hiding/Stacking */
+    .container .list {
+        display: none; /* Hide the full navigation list for mobile */
+        /* You will need JavaScript to show it when .menu-toggle is clicked */
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg-color);
+        flex-direction: column;
+        align-items: center;
+        z-index: 5;
+    }
+    .container .list .li-list {
+        width: 100%;
+        text-align: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    .container .list .li-list h6.title {
+        margin-right: 0;
+        padding: 10px 0;
+    }
+    
+    /* 2. News Section */
+    .headline {
+        margin-top: 150px; /* Adjust margin due to fixed header */
+        font-size: 30px; 
+    }
+    .news-container {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 2rem;
+        margin: 1rem;
+    }
+    .news-item {
+        width: 100%; 
+        height: auto;
+        max-height: 50vh;
+        overflow: hidden;
+    }
+    .news-title {
+        height: auto;
+        margin-bottom: 5px;
+    }
+
+    /* 3. E-Services Section */
+    .main-container {
+        flex-direction: column;
+    }
+    .image-container {
+        width: 90%; 
+        margin: 1rem auto;
+    }
+    .services-e-services {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        gap: 2rem;
+        width: 90%; 
+        margin: 2rem auto; /* Center it */
+    }
+    .icon-container {
+        width: 6rem;
+        height: 12vh;
+    }
+
+    /* 4. Events Section */
+    .container-event {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card-event {
+        width: 90%; 
+        margin: 0 auto;
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .events {
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* 5. Unites Section */
+    .unites-faculity {
+        height: auto;
+        padding-bottom: 50px;
+    }
+    .grid {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 20px;
+    }
+    .card-container {
+        width: 90%;
+        height: 12rem;
+        margin: 0 auto;
+    }
+    .back p {
+        width: 90%;
+        font-size: 1rem;
+    }
+    .card-unites .front.yellow h2 {
+        font-size: 1.2rem;
+    }
+    .front.yellow h5 {
+        font-size: 1.2rem;
+    }
+
+    /* 6. Supervisory Models */
+    .supervisory-models .card {
+        flex-direction: column;
+        align-items: center;
+    }
+    .supervisory-models .box-img {
+        margin: 20px 0;
+    }
+    .supervisory-models .text {
+        width: 90%;
+        margin-right: 0;
+        padding: 20px;
+        height: auto;
+    }
+    .supervisory-models .text .title {
+        position: static;
+        margin-top: 10px;
+        text-align: left;
+    }
+    .supervisory-models .button-click {
+        position: static;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    /* 7. Training Section */
+    .container-training {
+        flex-direction: column;
+        margin: 20px 0;
+        padding: 10px;
+    }
+    .container-training img {
+        width: 90%;
+        height: auto;
+        margin: 0 auto;
+    }
+    .content-training {
+        max-width: 100%;
+        margin-top: 20px;
+    }
+    .services-traing {
+        padding: 10px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .button-traning {
+        position: static;
+        width: 90%;
+        margin-top: 15px;
+    }
+
+    /* 8. Ratios Section */
+    .Ratios .cardes {
+        grid-template-columns: 1fr; /* Single column */
+        margin: 0 10px;
+        border-radius: 20px;
+    }
+    .Ratios .card-ratios {
+        justify-content: center;
+        margin-right: 0;
+    }
+    .Ratios .cardes .card h5 {
+        font-size: 20px;
+    }
+    .Ratios {
+        height: auto;
+        padding-bottom: 30px;
+    }
+    
+    /* 9. Form Section */
+    .form-design {
+        flex-direction: column;
+        height: auto;
+    }
+    .form-design .right-form {
+        width: 95%;
+        margin: 10px auto;
+    }
+    .filed-box {
+        grid-template-columns: 1fr; /* Single column */
+        gap: 1rem;
+    }
+    .filed-box textarea {
+        height: 8rem;
+    }
+    .left-sujestion .socialMedia {
+        margin-right: 0;
+        justify-content: center;
+    }
+
+    /* 10. Footer Section */
+    footer .container-footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .container-footer .card-footer {
+        width: 90%;
+        margin-top: 10px;
+        align-self: center;
+    }
+    .footer-content-link .links {
+        align-self: center;
+    }
+}
