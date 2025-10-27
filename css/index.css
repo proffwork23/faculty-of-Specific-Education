@@ -250,9 +250,9 @@ header{
 .container .list .main-list li:hover::after{
     display: block;
 }
-header  .introduction{
+header .introduction{
     background-color: rgba(243, 243, 248, 0.886);
-    padding-right: 8rem;
+    padding: 5px 1rem; /* تم تقليل الـ padding ليصبح 1rem بدلاً من 8rem */
     text-align: center;
 }
 .introduction h6{
@@ -1665,15 +1665,19 @@ footer {
         align-items: center;
         z-index: 5;
     }
-    /* FIX: Introduction Ticker/Slider - Force hide overflow */
-    header .introduction {
-        width: 100% !important; 
-        padding: 0 5px !important; /* تقليل الـ padding الثابت */
-        overflow-x: hidden !important; 
-    }
-    .introduction h6 {
-        white-space: nowrap; 
-    }
+   /* FIX: Introduction Ticker/Slider - Force hide overflow (الإصلاح النهائي) */
+header .introduction {
+    width: 100% !important; 
+    padding: 5px 0 !important; /* نستخدم 0 لمنع أي تجاوز من الأطراف */
+    overflow: hidden !important; /* استخدمنا 'hidden' فقط بدلاً من 'overflow-x' لضمان الإخفاء */
+}
+
+/* الأهم: نضمن أن العنصر المتحرك نفسه لا يجبر الكونتينر على التوسع */
+.introduction h6 {
+    white-space: nowrap; 
+    display: inline-block !important; /* هام جداً: للتحكم في العنصر المتحرك */
+    position: relative !important;
+}
 
     /* 3. Landing Page (Slider/Footer Menus) */
     .landing-pag #next-btn-1,
