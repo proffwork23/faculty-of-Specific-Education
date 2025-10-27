@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<!-- Coding By CodingNepal - www.codingnepalweb.com -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card Slider HTML & CSS | CodingNepal</title>
+  <!-- Linking Google fonts for icons -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <!-- Linking SwiperJS CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container swiper">
+    <div class="card-wrapper">
+      <!-- Card slides container -->
+      <ul class="card-list swiper-wrapper">
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="img/الخريطة.jpg" alt="Card Image" class="card-image">
+            <p class="badge badge-designer">موقع الكلية بالنسبة للجامعة</p>
+            <h2 class="card-title">تبلغ المساحة الإجمالية لمباني الكلية (11.300) م2، ويبلغ نصيب الطالب من تلك المساحة (3.7) م2، وهي تتناسب مع أعداد الطلاب بالكلية ومع طبيعة نشاط الكلية.</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="img/مدرجات نوعية مجمعة 4-01.png" alt="Card Image" class="card-image">
+            <p class="badge badge-developer">مدرجات كلية التربية النوعية وهي عبارة عن 4 مدرجات</p>
+            <h2 class="card-title">Lorem ipsum dolor sit explicabo adipisicing elit</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="img/المبنى الرئيسية-01.png" alt="Card Image" class="card-image">
+            <p class="badge badge-marketer">المبني الرئيسي</p>
+            <h2 class="card-title">المبني الرئيسي للكلية وهو المنبني الاداري ايضا حيث يضم مكاتب اعضاء هيئة التدريس والادارةوغيرها</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+        <li class="card-item swiper-slide">
+          <a href="#" class="card-link">
+            <img src="img/المبني القديم-01.png" alt="Card Image" class="card-image">
+            <p class="badge badge-gamer">المبني القديم</p>
+            <h2 class="card-title">ويضم المبني 20 قاعة تدريسية موزعة على 4 ادوار كل قسم له دور وهي قاعات تدريسية</h2>
+            <button class="card-button material-symbols-rounded">arrow_forward</button>
+          </a>
+        </li>
+        
+      </ul>
+
+       <!-- Pagination -->
+      <div class="swiper-pagination"></div>
+
+      <!-- Navigation Buttons -->
+      <div class="swiper-slide-button swiper-button-prev"></div>
+      <div class="swiper-slide-button swiper-button-next"></div>
+    </div>
+  </div>
+
+  <!-- Linking SwiperJS script -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Linking custom script -->
+  <script src="js.js"></script>
+</body>
+</html>

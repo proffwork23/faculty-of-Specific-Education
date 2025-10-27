@@ -1,0 +1,25 @@
+:root{
+    --dark-bg-color: #1e1e2f;
+    --secundery-bg-color: #2a2a40;
+    --text-color: #bbb;
+    --main-text-color: #fff;
+
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: .1s;
+    direction: rtl;
+
+}
+body{
+    background-color: var(--dark-bg-color);
+    color: var(--main-text-color);
+    font-family: 'Cairo', sans-serif;
+    
+}
+.container{
+    width: 80%;
+    margin: auto;
+}
