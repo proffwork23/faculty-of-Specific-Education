@@ -1568,52 +1568,73 @@ footer {
 /*==========================================================
 | Mobile Responsiveness Fixes (Max-width 768px)
 ==========================================================*/
+/*==========================================================
+| Mobile Responsiveness FINAL FIXES (Max-width 768px)
+| CRITICAL: SOLVING THE HORIZONTAL SCROLLBAR PROBLEM
+==========================================================*/
 
 @media (max-width: 768px) {
-    /* **1. FIX ALL OVERFLOWING ELEMENTS** */
-    * {
-        /* This prevents any element from forcing the page to scroll horizontally */
-        max-width: 100% !important; 
-        overflow-x: hidden !important; 
-    }
-    body {
-        overflow-x: hidden !important;
+    
+    /* **1. CRITICAL FIX: ABSOLUTE OVERFLOW PREVENTION** */
+    html, body {
+        width: 100% !important;
+        min-width: 100% !important;
+        overflow-x: hidden !important; /* إجبار المتصفح على منع التمرير الأفقي */
+        margin: 0 !important;
+        padding: 0 !important;
     }
 
-    /* **2. Header and Logo Fixes (Addressing the main issue)** */
-    header {
-        width: 100%;
+    * {
+        /* إجبار كل عنصر على التكيف، وضمان أن المساحات الداخلية لا تسبب الخروج عن الحدود */
+        box-sizing: border-box !important;
+        max-width: 100% !important;
     }
-    .container {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0.5rem;
-        width: 100%;
+
+    /* **2. Header and Navigation Fixes (Targeting absolute positions)** */
+    header {
+        width: 100% !important; 
+        position: relative !important; /* نغيره إلى نسبي لضبط الأبناء */
+        overflow-x: hidden !important; 
     }
     
+    .container {
+        flex-direction: column;
+        align-items: center; /* توسيط العناصر داخل الـ container */
+        padding: 0.5rem;
+        width: 100%;
+        height: auto;
+    }
+    
+    /* FIX: Logo Positioning - The main culprit! */
     .container .logo {
         flex-direction: column;
         align-items: center;
         width: 100%;
         position: relative;
         padding-top: 10px;
-        height: auto; /* Allow height to adjust */
+        height: auto; 
     }
+    
     .container .logo img {
-        position: static; /* Remove absolute positioning */
+        position: static !important; /* إلغاء التموضع المطلق */
         width: 4rem;
         height: 4rem;
         margin: 0 auto 5px auto;
         display: block;
+        right: auto !important; /* إزالة إزاحة الـ right الثابتة */
+        bottom: auto !important; 
     }
+    
     .logo-info span,
     .logo-info .english {
-        position: static; /* Remove absolute positioning */
+        position: static !important; /* إلغاء التموضع المطلق */
         text-align: center;
         display: block;
         width: 100%;
         margin: 0;
         line-height: 1.2;
+        right: auto !important; /* إزالة إزاحة الـ right الثابتة */
+        bottom: auto !important;
     }
     .logo-info span {
         font-size: 1.2rem;
@@ -1631,7 +1652,7 @@ footer {
         color: var(--text-color);
         z-index: 100;
     }
-
+    
     /* Navigation list adjustment - Hiding/Stacking */
     .container .list {
         display: none; /* Hide the full navigation list for mobile */
@@ -1644,43 +1665,32 @@ footer {
         align-items: center;
         z-index: 5;
     }
-    .container .list .li-list {
-        width: 100%;
-        text-align: center;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-    .container .list .li-list h6.title {
-        margin-right: 0;
-        padding: 10px 0;
-    }
-    
-    /* FIX: Introduction Ticker/Slider */
+    /* FIX: Introduction Ticker/Slider - Force hide overflow */
     header .introduction {
-        padding-right: 0;
-        width: 100%;
-        overflow: hidden; /* Ensure content stays within bounds */
+        width: 100% !important; 
+        padding: 0 5px !important; /* تقليل الـ padding الثابت */
+        overflow-x: hidden !important; 
     }
     .introduction h6 {
-        /* Allow the animation to move, but ensure the container is controlled */
         white-space: nowrap; 
     }
 
     /* 3. Landing Page (Slider/Footer Menus) */
     .landing-pag #next-btn-1,
     .landing-pag #prev-btn-1 {
-        top: 30%; /* Move arrows higher to be visible */
+        top: 30%; 
     }
     .slid-menu-BL {
         width: 90%; 
         left: 50%;
         transform: translateX(-50%);
-        bottom: -55px; /* Adjust position */
+        bottom: -55px; 
     }
     .slid-menu-BR {
         width: 90%;
         right: 50%;
         transform: translateX(50%);
-        bottom: -110px; /* Adjust position to be below BL */
+        bottom: -110px; 
         margin-top: 60px;
     }
     .slid-menu-BR ul {
@@ -1712,11 +1722,11 @@ footer {
         margin: 1rem auto;
     }
     .services-e-services {
-        grid-template-columns: repeat(2, 1fr); /* 2 columns */
+        grid-template-columns: repeat(2, 1fr); 
         gap: 1rem;
         width: 90%; 
         margin: 2rem auto; 
-        margin-left: auto; /* Override original margin */
+        margin-left: auto; 
     }
 
     /* 6. Events Section */
@@ -1733,19 +1743,14 @@ footer {
 
     /* 7. Unites Section */
     .grid {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
         gap: 20px;
     }
     .card-container {
-        width: 90%; /* Smaller width for container */
+        width: 90%; 
         height: 12rem;
         margin: 0 auto;
     }
-    .back p {
-        width: 90%;
-        font-size: 1rem;
-    }
-    /* FIX: Remove fixed width that prevents back content from fitting */
     .back p {
         width: 90% !important;
         font-size: 1rem;
@@ -1753,7 +1758,7 @@ footer {
 
     /* 8. Ratios Section */
     .Ratios .cardes {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
         margin: 0 10px;
         border-radius: 20px;
     }
@@ -1772,7 +1777,7 @@ footer {
         margin: 10px auto;
     }
     .filed-box {
-        grid-template-columns: 1fr; /* Single column */
+        grid-template-columns: 1fr; 
         gap: 1rem;
     }
 
@@ -1786,6 +1791,25 @@ footer {
         width: 90%;
         margin-top: 10px;
         align-self: center;
+    }
+
+    /* Fix image and introduction block in about/vision pages */
+    .int {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+    .int .n {
+        width: 100%;
+        margin: 10px 0;
+        text-align: justify;
+    }
+    .int .img-container {
+        width: 90%;
+        height: 40vh; /* تصغير الارتفاع ليتناسب مع الموبايل */
+        margin-left: 0;
     }
 
 }

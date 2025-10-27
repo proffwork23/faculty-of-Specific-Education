@@ -533,3 +533,248 @@ footer {
   }
   /*end scrol bar/*
 
+/*==========================================================
+| Mobile Responsiveness FINAL FIXES (Max-width 768px)
+| CRITICAL: SOLVING THE HORIZONTAL SCROLLBAR PROBLEM
+==========================================================*/
+
+@media (max-width: 768px) {
+    
+    /* **1. CRITICAL FIX: ABSOLUTE OVERFLOW PREVENTION** */
+    html, body {
+        width: 100% !important;
+        min-width: 100% !important;
+        overflow-x: hidden !important; /* إجبار المتصفح على منع التمرير الأفقي */
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    * {
+        /* إجبار كل عنصر على التكيف، وضمان أن المساحات الداخلية لا تسبب الخروج عن الحدود */
+        box-sizing: border-box !important;
+        max-width: 100% !important;
+    }
+
+    /* **2. Header and Navigation Fixes (Targeting absolute positions)** */
+    header {
+        width: 100% !important; 
+        position: relative !important; /* نغيره إلى نسبي لضبط الأبناء */
+        overflow-x: hidden !important; 
+    }
+    
+    .container {
+        flex-direction: column;
+        align-items: center; /* توسيط العناصر داخل الـ container */
+        padding: 0.5rem;
+        width: 100%;
+        height: auto;
+    }
+    
+    /* FIX: Logo Positioning - The main culprit! */
+    .container .logo {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        position: relative;
+        padding-top: 10px;
+        height: auto; 
+    }
+    
+    .container .logo img {
+        position: static !important; /* إلغاء التموضع المطلق */
+        width: 4rem;
+        height: 4rem;
+        margin: 0 auto 5px auto;
+        display: block;
+        right: auto !important; /* إزالة إزاحة الـ right الثابتة */
+        bottom: auto !important; 
+    }
+    
+    .logo-info span,
+    .logo-info .english {
+        position: static !important; /* إلغاء التموضع المطلق */
+        text-align: center;
+        display: block;
+        width: 100%;
+        margin: 0;
+        line-height: 1.2;
+        right: auto !important; /* إزالة إزاحة الـ right الثابتة */
+        bottom: auto !important;
+    }
+    .logo-info span {
+        font-size: 1.2rem;
+    }
+    .logo-info .english {
+        font-size: 0.9rem;
+        margin-bottom: 10px;
+    }
+    
+    .menu-toggle {
+        display: block; /* Show menu toggle button */
+        position: absolute;
+        left: 20px;
+        top: 35px;
+        color: var(--text-color);
+        z-index: 100;
+    }
+    
+    /* Navigation list adjustment - Hiding/Stacking */
+    .container .list {
+        display: none; /* Hide the full navigation list for mobile */
+        position: absolute;
+        top: 120px;
+        left: 0;
+        width: 100%;
+        background-color: var(--dark-bg-color);
+        flex-direction: column;
+        align-items: center;
+        z-index: 5;
+    }
+    /* FIX: Introduction Ticker/Slider - Force hide overflow */
+    header .introduction {
+        width: 100% !important; 
+        padding: 0 5px !important; /* تقليل الـ padding الثابت */
+        overflow-x: hidden !important; 
+    }
+    .introduction h6 {
+        white-space: nowrap; 
+    }
+
+    /* 3. Landing Page (Slider/Footer Menus) */
+    .landing-pag #next-btn-1,
+    .landing-pag #prev-btn-1 {
+        top: 30%; 
+    }
+    .slid-menu-BL {
+        width: 90%; 
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: -55px; 
+    }
+    .slid-menu-BR {
+        width: 90%;
+        right: 50%;
+        transform: translateX(50%);
+        bottom: -110px; 
+        margin-top: 60px;
+    }
+    .slid-menu-BR ul {
+        justify-content: space-around;
+        width: 100%;
+    }
+
+    /* 4. News Section */
+    .headline {
+        margin-top: 150px; 
+        font-size: 30px; 
+    }
+    .news-container {
+        grid-template-columns: 1fr; 
+        gap: 2rem;
+        margin: 1rem;
+    }
+    .news-item {
+        width: 100%; 
+        height: auto;
+    }
+
+    /* 5. E-Services Section */
+    .main-container {
+        flex-direction: column;
+    }
+    .image-container {
+        width: 90%; 
+        margin: 1rem auto;
+    }
+    .services-e-services {
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 1rem;
+        width: 90%; 
+        margin: 2rem auto; 
+        margin-left: auto; 
+    }
+
+    /* 6. Events Section */
+    .container-event {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card-event {
+        width: 90%; 
+        margin: 0 auto;
+        height: auto;
+        padding-bottom: 50px;
+    }
+
+    /* 7. Unites Section */
+    .grid {
+        grid-template-columns: 1fr; 
+        gap: 20px;
+    }
+    .card-container {
+        width: 90%; 
+        height: 12rem;
+        margin: 0 auto;
+    }
+    .back p {
+        width: 90% !important;
+        font-size: 1rem;
+    }
+
+    /* 8. Ratios Section */
+    .Ratios .cardes {
+        grid-template-columns: 1fr; 
+        margin: 0 10px;
+        border-radius: 20px;
+    }
+    .Ratios .card-ratios {
+        justify-content: center;
+        margin-right: 0;
+    }
+    
+    /* 9. Form Section */
+    .form-design {
+        flex-direction: column;
+        height: auto;
+    }
+    .form-design .right-form {
+        width: 95%;
+        margin: 10px auto;
+    }
+    .filed-box {
+        grid-template-columns: 1fr; 
+        gap: 1rem;
+    }
+
+    /* 10. Footer Section */
+    footer .container-footer {
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+    .container-footer .card-footer {
+        width: 90%;
+        margin-top: 10px;
+        align-self: center;
+    }
+
+    /* Fix image and introduction block in about/vision pages */
+    .int {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 10px;
+    }
+    .int .n {
+        width: 100%;
+        margin: 10px 0;
+        text-align: justify;
+    }
+    .int .img-container {
+        width: 90%;
+        height: 40vh; /* تصغير الارتفاع ليتناسب مع الموبايل */
+        margin-left: 0;
+    }
+
+}
